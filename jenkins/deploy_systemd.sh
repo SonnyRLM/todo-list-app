@@ -39,9 +39,6 @@ ExecStart=/bin/bash -c 'cd /opt/todo-list && source /opt/todo-list/venv/bin/acti
 [Install]
 WantedBy=multi-user.target
 EOF
-[Install]
-WantedBy=multi-user.target
-EOF
 
 # Move service file to systemd
 sudo cp todo-list.service /etc/systemd/system/todo-list.service
