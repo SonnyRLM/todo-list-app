@@ -20,7 +20,7 @@ User=jenkins
 WorkingDirectory=/opt/todo-list
 Environment="DATABASE_URI=$DATABASE_URI"
 Environment="SECRET_KEY=$SECRET_KEY"
-ExecStart=/bin/bash -c 'cd /opt/todo-list && source /opt/todo-list/venv/bin/activate && python3 /opt/todo-list/create.py && python3 /opt/todo-list/app.py'
+ExecStart=/bin/bash -c jenkins/setup.sh
 
 
 # Systemd service configuration here
