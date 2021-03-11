@@ -13,11 +13,6 @@ cat << EOF > todo-list.service
 [Unit]
 Description=Todo List
 
-# Generate service file
-cat << EOF > todo-list.service
-[Unit]
-Description=Todo List
-
 [Service]
 User=jenkins
 Environment=DATABASE_URI=$DATABASE_URI
