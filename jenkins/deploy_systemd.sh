@@ -17,9 +17,8 @@ Description=Todo List
 
 [Service]
 User=jenkins
-WorkingDirectory=/opt/todo-list
-Environment="DATABASE_URI=$DATABASE_URI"
-Environment="SECRET_KEY=$SECRET_KEY"
+Environment=DATABASE_URI=$DATABASE_URI
+Environment=SECRET_KEY=$SECRET_KEY
 ExecStart=/opt/todo-list/jenkins/startup.sh
 
 
