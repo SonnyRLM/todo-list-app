@@ -5,6 +5,9 @@ rm -r /opt/todo-list
 mkdir /opt/todo-list
 cp -r . /opt/todo-list
 
+#Perms
+sudo chown -R jenkins /opt
+
 # Generate service file
 cat << EOF > todo-list.service
 [Unit]
