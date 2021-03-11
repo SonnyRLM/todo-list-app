@@ -20,7 +20,7 @@ User=jenkins
 WorkingDirectory=/opt/todo-list
 Environment="DATABASE_URI=$DATABASE_URI"
 Environment="SECRET_KEY=$SECRET_KEY"
-ExecStart=/home/sonny/todo-list-app/jenkins/startup.sh
+ExecStart=/home/jenkins/todo-list-app/jenkins/startup.sh
 
 
 # Systemd service configuration here
