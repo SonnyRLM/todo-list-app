@@ -10,7 +10,19 @@ cat << EOF > todo-list.service
 [Unit]
 Description=Todo List
 
+# Generate service file
+cat << EOF > todo-list.service
+[Unit]
+Description=Todo List
+
 [Service]
+User=jenkins
+WorkingDirectory=/opt/todo-list
+Environment="DATABASE_URI=$DATABASE_URI"
+Environment="SECRET_KEY=$SECRET_KEY"
+ExecStart=/bin/bash -c 'cd /opt/todo-list && source /opt/todo-list/venv/bin/activate && python3 /opt/todo-list/create.py && python3 /opt/todo-list/app.py'
+
+
 # Systemd service configuration here
 # You'll need to set these environment variables:
 #     DATABASE_URI
@@ -24,6 +36,9 @@ Description=Todo List
 # Configuration here!
 # ----------------------------------
 
+[Install]
+WantedBy=multi-user.target
+EOF
 [Install]
 WantedBy=multi-user.target
 EOF
