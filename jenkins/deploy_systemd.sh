@@ -33,7 +33,7 @@ ExecStart=/bin/bash -c 'cd /opt/todo-list && source /opt/todo-list/venv/bin/acti
 # Attach the user either to jenkins or (preferably) 
 # dedicated service user, e.g. pythonadm
 # ----------------------------------
-# Configuration here!
+# Configuration
 # ----------------------------------
 
 [Install]
