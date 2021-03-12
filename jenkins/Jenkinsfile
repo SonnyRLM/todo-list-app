@@ -16,7 +16,7 @@ pipeline{
         }
         stage("Build and Push Images"){
             steps{
-                sh "bash jenkins/build_images.sh"
+                sudo sh "bash jenkins/build_images.sh"
             }
         }
         stage("Deploy"){
