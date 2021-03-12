@@ -5,7 +5,7 @@ pipeline{
         TEST_DATABASE_URI = "sqlite:///data.db"
         TEST_SECRET_KEY = "test"
         CHROMEDRIVER_PATH = "/home/jenkins/chromedriver"
-        AUTHOR = credentials("AUTHOR")
+        AUTHOR = "sonnyrlm"
         SECRET_KEY = credentials("SECRET_KEY")
     }
     stages{
