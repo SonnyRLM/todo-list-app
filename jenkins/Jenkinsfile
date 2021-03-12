@@ -21,7 +21,7 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                sh "bash jenkins/deploy_compose.sh"
+                sh "sudo bash jenkins/deploy_compose.sh"
             }
         }
     }
