@@ -16,12 +16,12 @@ pipeline{
         }
         stage("Build and Push Images"){
             steps{
-                sh "bash jenkins/build_images.sh"
+                sudo sh "bash jenkins/build_images.sh"
             }
         }
         stage("Deploy"){
             steps{
-                sh "bash jenkins/deploy_compose.sh"
+                sudo sh "bash jenkins/deploy_compose.sh"
             }
         }
     }
